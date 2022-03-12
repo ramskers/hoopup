@@ -1,6 +1,6 @@
-import React from "react";
-import validate from "./ValidateInfo";
-import useForm from "./useForm";
+import React, { useState } from "react";
+import ValidateSignUp from "./ValidateSignUp";
+import useSignUpForm from "./useSignUpForm";
 import "./Form.css";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
@@ -22,8 +22,7 @@ const FormSignup = (props) => {
         .catch((err) => {
           switch (err.code) {
             case "auth/email-already-in-use":
-            case "auth/invalid-email":
-              setErrors({ email: err.message });
+              setAuthError("Email already In Use");
               break;
           }
         });
@@ -36,10 +35,12 @@ const FormSignup = (props) => {
     alert(alertString);
   };
 
-  const { handleChange, handleSubmit, values, errors } = useForm(
+  const { handleChange, handleSubmit, values, errors } = useSignUpForm(
     submitForm,
-    validate
+    ValidateSignUp
   );
+
+  const [authError, setAuthError] = useState(null);
 
   return (
     <div className="form-content-right">
@@ -107,8 +108,9 @@ const FormSignup = (props) => {
             onChange={handleChange}
           />
           {errors.password2 && <p>{errors.password2}</p>}
+          {authError && <p>{authError}</p>}
         </div>
-        <button onClick={submitForm} className="form-input-btn" type="submit">
+        <button className="form-input-btn" type="submit">
           Sign up
         </button>
         <span className="form-input-login">

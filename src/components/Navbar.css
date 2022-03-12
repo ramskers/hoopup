@@ -31,13 +31,13 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 10px;
+  grid-template-columns: repeat(5, auto);
+  /* grid-gap: 10px; */
   list-style: none;
   text-align: center;
-  width: 60vw;
+  width: 50vw;
   justify-content: end;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 .nav-item {

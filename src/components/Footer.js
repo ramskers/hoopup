@@ -14,7 +14,9 @@ function Footer() {
         <p className="footer-subscription-text" style={{ fontSize: "18px" }}>
           Sign up now!
         </p>
-        <Button buttonStyle="btn--outline">Create Account</Button>
+        <Button route="/signUp" buttonStyle="btn--outline">
+          Create Account
+        </Button>
       </section>
       <div className="footer-links">
         <div className="footer-link-wrapper">

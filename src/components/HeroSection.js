@@ -12,6 +12,7 @@ function HeroSection() {
       <p>ANYWHERE. ANYTIME.</p>
       <div className="hero-btns">
         <Button
+          route="/signUp"
           className="btns"
           buttonStyle="btn--outline"
           buttonSize="btn--large"
@@ -19,6 +20,7 @@ function HeroSection() {
           Get Started
         </Button>
         <Button
+          route="/login"
           className="btns"
           buttonStyle="btn--primary"
           buttonSize="btn--large"
