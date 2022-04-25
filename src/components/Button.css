@@ -25,6 +25,25 @@
   margin: 8px;
 }
 
+.btn--reg {
+  padding: 8px;
+  width: 164px;
+  border: solid;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-top: 10px;
+}
+
+.btn--reg:hover {
+  background-color: #7393b3;
+  border: none;
+}
+
 .btn--medium {
   padding: 8px 20px;
   font-size: 20px;
@@ -40,4 +59,10 @@
   background: white;
   color: #242424;
   transition: all 0.3s ease-out;
+}
+
+@media (max-width: 768px) {
+  .btn--reg {
+    padding: 0px;
+  }
 }

@@ -32,9 +32,9 @@ function Home({ isAuth }) {
       <p className="homePage-p">
         Create a post to connect with other PICKUP BALLERS
       </p>
-      <button className="post-btn" route="/createPost">
+      <Button buttonStyle="btn--reg" className="post-btn" route="/createPost">
         Create Post
-      </button>
+      </Button>
       {postLists.map((post) => {
         return (
           <div className="post">
