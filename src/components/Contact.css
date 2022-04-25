@@ -1,0 +1,83 @@
+.contact-img {
+  background-image: url("../../public/images/CourtsBackground.jpg");
+  background-size: cover;
+}
+
+.contact-form {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-header {
+  color: white;
+}
+
+.contact-text-area {
+  padding: 20px;
+  border-radius: 3px;
+  /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.137); */
+  margin-bottom: 20px;
+  border: 1px solid lightgray;
+  /* border: none; */
+  background: #fff;
+  font-size: 16px;
+  color: rgb(0, 0, 32);
+  outline: none;
+}
+
+.contact-input {
+  padding: 20px;
+  border-radius: 3px;
+  /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.137); */
+  margin-bottom: 20px;
+  border: 1px solid lightgray;
+  /* border: none; */
+  background: #fff;
+  font-size: 16px;
+  color: rgb(0, 0, 32);
+  outline: none;
+}
+
+.contact-text-area:focus {
+  border: 1px solid rgb(0, 0, 196);
+}
+
+.contact-input:focus {
+  border: 1px solid rgb(0, 0, 196);
+}
+
+.contact-text-area {
+  height: 100px;
+  max-width: 800px;
+  min-height: 150px;
+}
+
+.contact-label {
+  padding: 10px;
+  margin-bottom: 8px;
+  color: orange;
+  background-color: black;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.contact-btn {
+  padding: 10px;
+  width: 225px;
+  border: none;
+  background-color: #7393b3;
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-top: 10px;
+}
+
+.contact-btn:hover {
+  background-color: black;
+}

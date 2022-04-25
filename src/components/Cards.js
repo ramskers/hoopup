@@ -13,13 +13,13 @@ function Cards() {
               src="images/AmericanLegion.jpeg"
               text="Plan your next pickup game at American Legion Park"
               label="Outdoor"
-              path="/Courts"
+              path="/login"
             />
             <CardItem
               src="images/FosterPark.jpeg"
               text="Plan your next pickup game at Foster Park"
               label="Outdoor"
-              path="/Courts"
+              path="/login"
             />
           </ul>
           <ul className="cards__items">
@@ -27,19 +27,19 @@ function Cards() {
               src="images/AmericanLegion.jpeg"
               text="Plan your next pickup game at American Legion Park"
               label="Outdoor"
-              path="/Courts"
+              path="/login"
             />
             <CardItem
               src="images/FosterPark.jpeg"
               text="Plan your next pickup game at Foster Park"
               label="Outdoor"
-              path="/Courts"
+              path="/login"
             />
             <CardItem
               src="images/CopelandPark.jpeg"
               text="Plan your next pickup game at Copeland Park and Center"
               label="Outdoor/Indoor"
-              path="/Courts"
+              path="/login"
             />
           </ul>
         </div>

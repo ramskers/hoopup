@@ -27,7 +27,7 @@ const useLoginForm = (callback, validate) => {
     if (Object.keys(errors).length === 0 && isSubmitting) {
       callback(values, errors);
     }
-  }, [errors]);
+  }, [errors, isSubmitting]);
 
   return { handleChange, handleSubmit, values, errors };
 };

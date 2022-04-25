@@ -17,14 +17,14 @@
   background-color: black;
 }
 
-.courts {
+/* .courts {
   background-image: url("/public/images/CourtsBackground.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
-}
+} */
 
 .groups {
   /* background-image: url(""); */
@@ -42,4 +42,182 @@
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
+}
+
+.homePage {
+  background: url("../public/images/GroupsBackground.jpg");
+  background-size: contain;
+  position: sticky;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.homePage-header {
+  background-color: orange;
+  border: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 50px;
+  padding: 10px;
+  color: white;
+}
+
+.homePage-p {
+  margin-top: 10px;
+  font-weight: 800;
+  font-size: 18px;
+  color: #fff;
+}
+
+.post {
+  width: 600px;
+  height: auto;
+  max-height: 600px;
+  background-color: rgb(250, 250, 250);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.post .postHeader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.postHeader .title {
+  flex: 50%;
+}
+.postHeader .deletePost {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.deletePost button {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.post .postTextContainer {
+  word-wrap: break-word;
+  height: auto;
+  max-height: 400px;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.post-btn {
+  padding: 8px;
+  width: 164px;
+  border: solid;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-top: 10px;
+}
+
+.post-btn:hover {
+  background-color: #7393b3;
+  border: none;
+}
+
+/* a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 25px;
+} */
+
+.createPostPage {
+  background-image: url(../public/images/CreateBackground.jpg);
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: grid;
+  place-items: center;
+}
+
+.cpContainer {
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  background-color: black;
+  opacity: 90%;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.cp-header {
+  text-align: center;
+}
+
+.cp-label {
+  font-size: 25px;
+}
+.cpContainer .inputGp {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-title,
+.cp-text {
+  font-size: 18px;
+  border: none;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.input-title {
+  height: 40px;
+}
+.cp-text {
+  height: 150px;
+}
+
+.cp-btn {
+  background-color: #7393b3;
+  transition: 0.2s ease-in-out;
+  margin-top: 20px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.cp-btn:hover {
+  background-color: white;
+  color: #7393b3;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .post {
+    width: 400px;
+  }
+
+  .cpContainer {
+    width: 400px;
+  }
+
+  .post-btn {
+    padding: 0px;
+  }
 }

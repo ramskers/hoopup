@@ -11,9 +11,8 @@ const Form = () => {
   }
 
   return (
-    <>
+    <div className="form-container1">
       <div className="form-container">
-        <span className="close-btn">x</span>
         <div className="form-content-left">
           <img src="images/register.jpg" alt="player" className="form-img" />
         </div>
@@ -23,7 +22,7 @@ const Form = () => {
           <FormSuccess />
         )}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import "./Form.css";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  updateCurrentUser,
+} from "firebase/auth";
+import { useAuth } from "../../firebase";
 import useLoginForm from "./useLoginForm";
 import ValidateLogin from "./ValidateLogin.js";
 
@@ -27,6 +32,8 @@ const FormSuccess = () => {
     }
   };
 
+  const currentUser = useAuth();
+
   const setErrors = (err) => {
     const errorKeys = Object.keys(err);
     const alertString = errorKeys.map((key) => err[key]).join(" ");
@@ -43,7 +50,9 @@ const FormSuccess = () => {
   return (
     <div className="form-content-right">
       <form className="form2" onSubmit={handleSubmit}>
-        <h1 className="form-success">You are now signed up!</h1>
+        <h1 className="form-success">
+          You are now signed up {currentUser?.email}!
+        </h1>
         <h2 className="form-login">Login</h2>
         <div className="form-inputs">
           <label htmlFor="email" className="form-label">

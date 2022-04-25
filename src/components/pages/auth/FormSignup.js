@@ -2,15 +2,36 @@ import React, { useState } from "react";
 import ValidateSignUp from "./ValidateSignUp";
 import useSignUpForm from "./useSignUpForm";
 import "./Form.css";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth, provider } from "../../firebase";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithPopup,
+} from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
-const FormSignup = (props) => {
+const FormSignup = (props, { setIsAuth }) => {
+  let navigate = useNavigate();
+
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, provider).then((_result) => {
+      localStorage.setItem("isAuth", true);
+      setIsAuth(true);
+      navigate("/");
+    });
+  };
+
   const { submitFormSuccess } = props;
 
   const submitForm = (values, errors) => {
     if (!errors.email && !errors.password) {
       const auth = getAuth();
-      createUserWithEmailAndPassword(auth, values.email, values.password)
+      createUserWithEmailAndPassword(
+        auth,
+        values.email,
+        values.password,
+        values.username
+      )
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
@@ -110,12 +131,19 @@ const FormSignup = (props) => {
           {errors.password2 && <p>{errors.password2}</p>}
           {authError && <p>{authError}</p>}
         </div>
-        <button className="form-input-btn" type="submit">
+        <button
+          // disable={loading || currentUser}
+          className="form-input-btn"
+          type="submit"
+        >
           Sign up
         </button>
         <span className="form-input-login">
-          Already have an account? Login <a href="/">here</a>
+          Already have an account? Login <a href="/login">here</a>
         </span>
+        <button className="login-with-google-btn" onClick={signInWithGoogle}>
+          Sign in with Google
+        </button>
       </form>
     </div>
   );

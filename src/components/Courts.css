@@ -1,0 +1,98 @@
+.court-background {
+  background: url("../../public/images/SearchBackground.jpg");
+  background-size: contain;
+}
+
+.court-header {
+  font-size: 72px;
+}
+
+.search-container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.search {
+  width: 327px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.listItem {
+  margin-bottom: 20px;
+  font-size: 25px;
+  color: #444;
+  font-weight: 300;
+}
+
+table {
+  border-width: 1px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 50px 0px;
+  border-spacing: 18px;
+  color: black;
+}
+
+.table-header {
+  background-color: #7393b3;
+  opacity: 80%;
+  color: white;
+  font-size: 32px;
+  border-radius: 10px;
+}
+
+tr {
+  border-width: 1px;
+}
+
+th {
+  width: 250px;
+  text-align: left;
+  font-size: 24px;
+}
+
+td {
+  width: 250px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+tbody {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-link {
+  color: blanchedalmond;
+  text-decoration: none;
+}
+
+.court-type {
+  color: orange;
+}
+
+@media (max-width: 768px) {
+  /* tr {
+    border: solid;
+    border-width: 1px;
+  } */
+
+  table {
+    border: none;
+  }
+
+  .court-checkin {
+    display: none;
+  }
+}

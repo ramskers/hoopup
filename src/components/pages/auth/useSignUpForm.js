@@ -26,13 +26,11 @@ const useSignUpForm = (callback, validate) => {
   };
 
   useEffect(() => {
-    console.log(1);
-    console.log(errors, isSubmitting);
     if (Object.keys(errors).length === 0 && isSubmitting) {
       console.log(2);
       callback(values, errors);
     }
-  }, [errors]);
+  }, [errors, isSubmitting]);
 
   return { handleChange, handleSubmit, values, errors };
 };
