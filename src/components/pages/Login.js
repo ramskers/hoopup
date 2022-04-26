@@ -10,6 +10,8 @@ import useLoginForm from "./auth/useLoginForm";
 import ValidateLogin from "./auth/ValidateLogin.js";
 import { useNavigate } from "react-router-dom";
 
+import { motion } from "framer-motion";
+
 const Login = ({ setIsAuth }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -22,6 +24,7 @@ const Login = ({ setIsAuth }) => {
       localStorage.setItem("isAuth", true);
       setIsAuth(true);
       navigate("/");
+      window.location.reload();
     });
   };
 
@@ -65,7 +68,12 @@ const Login = ({ setIsAuth }) => {
   const [authError, setAuthError] = useState(null);
 
   return (
-    <div className="signup">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="signup"
+    >
       <div className="form-container">
         <div className="form-content-left">
           <img src="images/register.jpg" alt="player" className="form-img" />
@@ -124,7 +132,7 @@ const Login = ({ setIsAuth }) => {
           </form>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

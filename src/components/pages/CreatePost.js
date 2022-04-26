@@ -3,6 +3,8 @@ import { addDoc, collection } from "firebase/firestore";
 import { db, auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 
+import { motion } from "framer-motion";
+
 function CreatePost({ isAuth }) {
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
@@ -26,7 +28,12 @@ function CreatePost({ isAuth }) {
   }, []);
 
   return (
-    <div className="createPostPage">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="createPostPage"
+    >
       <div className="cpContainer">
         <h1 className="cp-header">Create A Post</h1>
         <div className="inputGp">
@@ -54,7 +61,7 @@ function CreatePost({ isAuth }) {
           Submit Post
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -6,6 +6,8 @@ import ValidateLogin from "./auth/ValidateLogin.js";
 import { resetPassword } from "../firebase";
 import useForgotPassword from "./auth/useForgotPasswordForm";
 
+import { motion } from "framer-motion";
+
 const ForgottenPassword = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -44,7 +46,12 @@ const ForgottenPassword = () => {
   const [authError, setAuthError] = useState(null);
 
   return (
-    <div className="signup">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="signup"
+    >
       <>
         <div className="form-container">
           <span className="close-btn">x</span>
@@ -76,7 +83,7 @@ const ForgottenPassword = () => {
           </div>
         </div>
       </>
-    </div>
+    </motion.div>
   );
 };
 

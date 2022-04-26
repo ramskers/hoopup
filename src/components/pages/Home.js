@@ -11,10 +11,10 @@ function Home() {
 
   const { user, logoutUser } = useUserContext;
   return (
-    <>
+    <div>
       <HeroSection />
       <Cards />
-    </>
+    </div>
   );
 }
 

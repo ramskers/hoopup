@@ -4,6 +4,8 @@ import { auth, db } from "../firebase";
 import { Button } from "../Button";
 import "../../components/pages/CreatePost";
 
+import { motion } from "framer-motion";
+
 function Home({ isAuth }) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -27,7 +29,12 @@ function Home({ isAuth }) {
   }, []);
 
   return (
-    <div className="homePage">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="homePage"
+    >
       <h1 className="homePage-header">Community Chat</h1>
       <p className="homePage-p">
         Create a post to connect with other PICKUP BALLERS
@@ -60,7 +67,7 @@ function Home({ isAuth }) {
           </div>
         );
       })}
-    </div>
+    </motion.div>
   );
 }
 

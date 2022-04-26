@@ -3,6 +3,8 @@ import "../Contact.css";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "../firebase";
 
+import { motion } from "framer-motion";
+
 function Contact() {
   const [details, setDetails] = useState({
     name: "",
@@ -36,7 +38,12 @@ function Contact() {
   };
 
   return (
-    <div className="contact-img">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="contact-img"
+    >
       <form className="contact-form">
         <h1 className="contact-header">Contact Us 🤳</h1>
         <label className="contact-label">Name</label>
@@ -73,7 +80,7 @@ function Contact() {
           Submit
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 }
 

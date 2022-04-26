@@ -3,9 +3,16 @@ import "../App.css";
 import { Button } from "./Button";
 import "./HeroSection.css";
 
+import { motion } from "framer-motion";
+
 function HeroSection() {
   return (
-    <div className="hero-container">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="hero-container"
+    >
       <video src="/videos/background.mp4" autoPlay loop muted />
       <div className="overlay"></div>
       <h1>Pickup Basketball</h1>
@@ -28,7 +35,7 @@ function HeroSection() {
           Sign In
         </Button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
