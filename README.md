@@ -8,11 +8,7 @@ I grew up playing basketball with a few friends and the games we played were alw
 
 ## HoopUp Features
 
-User Authentication
-User Params
-Search Filter
-Community blog
-Contact Page
+User Authentication, User Params, Search Filter, Community blog, Contact Page
 
 ## Stack 
 
