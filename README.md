@@ -22,7 +22,7 @@ HTML, Javascript
 
 ### Styling
 
-CSS, Material UI
+CSS, Material UI, Framer Motion
 
 ### Backend 
 
